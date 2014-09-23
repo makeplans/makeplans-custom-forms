@@ -2,13 +2,13 @@
 
 ## Get started
 
-Booking, person, service, event and resource supports adding custom attributes via a customized form. The form is built with [Liquid](http://liquidmarkup.org). Please read the [Liquid documenation](https://github.com/Shopify/liquid/wiki) for more information. You can use HTML and all standard Liquid syntax. In additional to the standard Liquid tags MakePlans has made available various fields (booking and person) as well as custom field types (all objects).
+Booking, person, service, event and resource supports adding custom attributes via a customized form. The form is built with [Liquid](http://liquidmarkup.org). Please read the [Liquid documenation](https://github.com/Shopify/liquid/wiki) for more information. You can use HTML and all standard Liquid syntax. In additional to the standard Liquid tags MakePlans has made available various standard fields (for booking and person in public booking form) as well as custom field types (for booking, person, service, resource and event).
 
-Fields will produce a `<label>` and `<input>` or equivalent field, as well as a wrapper such as `<p>` or `<div>`.
+Fields will produce a `<label>` and `<input>` or other specified form field and wrapped in a container such as `<p>` or `<div>`.
 
 Standard fields which fails validation will have the `<input>` field wrapped in a `<div class="field_with_errors">`.
 
-There is no way guaranteed way to validate custom fields. The only way to do some sort of validation is using JavaScript or HTML5 form validation, which both can be skipped by the user.
+There is no way guaranteed way to validate custom fields. The only way to do some sort of validation is using JavaScript or HTML5 form validation which both can be skipped by the user.
 
 ## Complete example
 
@@ -29,13 +29,15 @@ There is no way guaranteed way to validate custom fields. The only way to do som
 
 ## Fields
 
+The html_options attribute is optional.
+
 ### Standard fields - public booking form
 
 For all these fields you can ommit the label and it will use the standard label for the specified field. `{% name %}` will produce a label with 'Name'.
 
 These fields are only applicable in the public booking form. They are already present in the administration forms.
 
-Syntax: `{% field 'label' %}`
+Syntax: `{% field 'label', 'html_options' %}`
 
 #### Email
 
@@ -80,8 +82,6 @@ Example: `{% country_code 'Country' %}`
 ### Custom fields - all forms
 
 Custom fields can be used in both the public booking form and all administration forms.
-
-The html_options attribute is optional.
 
 #### Text
 
