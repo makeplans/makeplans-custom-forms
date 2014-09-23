@@ -4,9 +4,11 @@
 
 Booking, person, service, event and resource supports adding custom attributes via a customized form. The form is built with [Liquid](http://liquidmarkup.org). Please read the [Liquid documenation](https://github.com/Shopify/liquid/wiki) for more information. You can use HTML and all standard Liquid syntax. In additional to the standard Liquid tags MakePlans has made available various fields (booking and person) as well as custom field types (all objects).
 
-Fields will produce a `<label>` and `<input>` or equivialnt field, as well as a wrapper such as `<p>` or `<div>`.
+Fields will produce a `<label>` and `<input>` or equivalent field, as well as a wrapper such as `<p>` or `<div>`.
 
-Fields with error will have the `<input>` field wrapped in a `<div class="field_with_errors">`
+Standard fields which fails validation will have the `<input>` field wrapped in a `<div class="field_with_errors">`.
+
+There is no way guaranteed way to validate custom fields. The only way to do some sort of validation is using JavaScript or HTML5 form validation, which both can be skipped by the user.
 
 ## Complete example
 
