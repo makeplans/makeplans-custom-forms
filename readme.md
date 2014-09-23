@@ -2,7 +2,7 @@
 
 ## Get started
 
-Booking, person, service, event and resource supports adding custom attributes via a customized form. The form is built with Liquid. Please read the Liquid documenation for more information. You can use HTML and all standard Liquid syntax. In additional to the standard Liquid tags MakePlans has made available various fields (booking and person) as well as custom field types (all objects).
+Booking, person, service, event and resource supports adding custom attributes via a customized form. The form is built with [Liquid](http://liquidmarkup.org). Please read the [Liquid documenation](https://github.com/Shopify/liquid/wiki) for more information. You can use HTML and all standard Liquid syntax. In additional to the standard Liquid tags MakePlans has made available various fields (booking and person) as well as custom field types (all objects).
 
 ## Fields
 
