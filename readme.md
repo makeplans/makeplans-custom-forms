@@ -4,6 +4,27 @@
 
 Booking, person, service, event and resource supports adding custom attributes via a customized form. The form is built with [Liquid](http://liquidmarkup.org). Please read the [Liquid documenation](https://github.com/Shopify/liquid/wiki) for more information. You can use HTML and all standard Liquid syntax. In additional to the standard Liquid tags MakePlans has made available various fields (booking and person) as well as custom field types (all objects).
 
+Fields will produce a `<label>` and `<input>` or equivialnt field, as well as a wrapper such as `<p>` or `<div>`.
+
+Fields with error will have the `<input>` field wrapped in a `<div class="field_with_errors">`
+
+## Complete example
+
+### Public booking form
+
+```
+{% name %}
+{% phone 'Mobile phone number' %}
+{% checkbox 'Do you want lunch when you arrive?', 'lunch', 'checked="checked"' %}
+```
+
+### Service administration form
+
+```
+{% textarea 'Information from supplier', 'supplier_info' %}
+{% select 'Expertise level', 'level', [ 'Beginner','Average','Expert' ] %}
+```
+
 ## Fields
 
 ### Standard fields - public booking form
@@ -70,7 +91,7 @@ Example: `{% text 'Descibe yourself with one word', 'self_description', 'data-re
 
 Syntax: `{% checkbox 'label', 'field_name', 'html_options' %}`.
 
-Example: `{% checkbox 'Do you want lunch?', 'lunch', 'selected' %}`
+Example: `{% checkbox 'Do you want lunch?', 'lunch', 'checked="checked"' %}`
 
 #### Select
 
@@ -82,7 +103,7 @@ Example: `{% select 'Favorite colour', 'colour', [ 'Red','Yellow','Blue','Green'
 
 Syntax: `{% textarea 'label', 'field_name', 'html_options' %}`.
 
-Example: `{% textarea 'Service additional information', 'additional_info' %}`
+Example: `{% textarea 'Information from supplier', 'supplier_info' %}`
 
 #### Hidden
 
