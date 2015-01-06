@@ -91,7 +91,9 @@ Custom fields can be used in both the public booking form and all administration
 
 Syntax: `{% text 'label', 'field_name', 'html_options' %}`.
 
-Example: `{% text 'Descibe yourself with one word', 'self_description', 'data-required="true"' %}`
+Basic example: `{% text 'Describe yourself with one word', 'self_description' %}`
+
+Extended example: `{% text 'Descibe yourself with one word', 'self_description', 'data-required="true"' %}`
 
 #### Checkbox
 
