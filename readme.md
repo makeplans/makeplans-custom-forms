@@ -118,3 +118,11 @@ Example: `{% textarea 'Information from supplier', 'supplier_info' %}`
 Syntax: `{% hidden 'field_name', 'html_options' %}`.
 
 Example: `{% hidden 'secret' %}`
+
+#### Date
+
+A date field will trigger a datepicker on the field in any form. In addition the name of the field should be suffixed with `_at` such as `last_visit_at`. This will ensure that the value is always treated as a date. Just using `date` will only ensure so visually in the form.
+
+Syntax: `{% date 'label', 'field_name', 'html_options' %}`.
+
+Example: `{% date 'Membership date', 'became_member_at' %}`
