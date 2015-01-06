@@ -10,6 +10,10 @@ Standard fields which fails validation will have the `<input>` field wrapped in 
 
 There is no way guaranteed way to validate custom fields. The only way to do some sort of validation is using JavaScript or HTML5 form validation which both can be skipped by the user.
 
+## Data types
+
+All values are stored as strings.
+
 ## Complete example
 
 ### Public booking form
