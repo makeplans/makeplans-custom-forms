@@ -43,9 +43,13 @@ These fields are only applicable in the public booking form. They are already pr
 
 Syntax: `{% field 'label', 'html_options' %}`
 
-#### Email
+#### Name
 
 Example: `{% name 'Your name' %}`
+
+#### Email
+
+Example: `{% email 'Your email' %}`
 
 #### Phone
 
