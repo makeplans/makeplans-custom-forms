@@ -8,7 +8,7 @@ Fields will produce a `<label>` and `<input>` or other specified form field and 
 
 Standard fields which fails validation will have the `<input>` field wrapped in a `<div class="field_with_errors">`.
 
-There is no way guaranteed way to validate custom fields. The only way to do some sort of validation is using JavaScript or HTML5 form validation which both can be skipped by the user.
+There is no guaranteed way to validate custom fields. The only way to do some sort of validation is using JavaScript or HTML5 form validation which both can be skipped by the user.
 
 ## Data types
 
