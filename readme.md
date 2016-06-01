@@ -107,7 +107,7 @@ Example: `{% checkbox 'Do you want lunch?', 'lunch', 'checked="checked"' %}`
 
 #### Select
 
-Syntax: `{% select 'label', 'field_name', ['value1', 'value2'], html_options' %}`.
+Syntax: `{% select 'label', 'field_name', ['value1', 'value2'], 'html_options' %}`.
 
 Example: `{% select 'Favorite colour', 'colour', [ 'Red','Yellow','Blue','Green' ], 'class="funkyclass"' %}`
 
