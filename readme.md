@@ -2,7 +2,7 @@
 
 ## Get started
 
-Booking, person, service, event, resource and category supports adding custom attributes via a customized form. The form is built with [Liquid](http://liquidmarkup.org). Please read the [Liquid documenation](https://github.com/Shopify/liquid/wiki) for more information. You can use HTML and all standard Liquid syntax. In additional to the standard Liquid tags MakePlans has made available various standard fields (for booking and person in public booking form) as well as custom field types (for booking, person, service, event, resource and category).
+Booking, person, service, event, resource and category supports adding custom attributes via a customized form. The form is built with [Liquid](http://liquidmarkup.org). Please read the [Liquid documentation](https://github.com/Shopify/liquid/wiki) for more information. You can use HTML and all standard Liquid syntax. In additional to the standard Liquid tags MakePlans has made available various standard fields (for booking and person in public booking form) as well as custom field types (for booking, person, service, event, resource and category).
 
 Fields will produce a `<label>` and `<input>` or other specified form field and wrapped in a container such as `<p>` or `<div>`.
 
@@ -37,55 +37,77 @@ The html_options attribute is optional.
 
 ### Standard fields - public booking form
 
-For all these fields you can ommit the label and it will use the standard label for the specified field. `{% name %}` will produce a label with 'Name'.
+For all these fields you can omit the label and it will use the standard label for the specified field. `{% name %}` will produce a label with 'Name'.
 
-These fields are only applicable in the public booking form. They are already present in the administration forms.
+These fields are only available in the public booking form. They are already present in the person administration form.
 
-Syntax: `{% field 'label', 'html_options' %}`
+Full syntax: `{% field 'label', 'html_options' %}`
 
 #### Name
 
-Example: `{% name 'Your name' %}`
+Basic example: `{% name %}`
+
+Custom label example: `{% name 'Full name' %}`
 
 #### Email
 
-Example: `{% email 'Your email' %}`
+Basic example: `{% email %}`
+
+Custom label example: `{% email 'E-mail address' %}`
 
 #### Phone
 
-Example: `{% phone 'Telephone number' %}`
+Basic example: `{% phone %}`
+
+Custom label example: `{% phone 'Cellular' %}`
 
 #### Note
 
-Example: `{% note 'Additional details' %}`
+Basic example: `{% note %}`
+
+Custom label example: `{% note 'Additional details' %}`
 
 #### Date of Birth
 
-Example: `{% date_of_birth 'Your birthday' %}`
+Basic example: `{% date_of_birth %}`
+
+Custom label example: `{% date_of_birth 'Your birthday' %}`
 
 #### National Id Number
 
-Example: `{% national_id_no 'Social Security Number' %}`
+Basic example: `{% national_id_no %}`
+
+Custom label example: `{% national_id_no 'Social Security Number' %}`
 
 #### Street
 
-Example: `{% street 'Street' %}`
+Basic example: `{% street %}`
+
+Custom label example: `{% street 'Street address' %}`
 
 #### Postal code
 
-Example: `{% postal_code 'Zipcode' %}`
+Basic example: `{% postal_code %}`
+
+Custom label example: `{% postal_code 'Zipcode' %}`
 
 #### City
 
-Example: `{% city 'Town' %}`
+Basic example: `{% city %}`
+
+Custom label example: `{% city 'Town' %}`
 
 #### State
 
-Example: `{% state 'State' %}`
+Basic example: `{% state %}`
+
+Custom label example: `{% state 'Region' %}`
 
 #### Country
 
-Example: `{% country_code 'Country' %}`
+Basic example: `{% country_code %}`
+
+Custom label example: `{% country_code 'Name of your country' %}`
 
 ### Custom fields - all forms
 
@@ -97,7 +119,7 @@ Syntax: `{% text 'label', 'field_name', 'html_options' %}`.
 
 Basic example: `{% text 'Describe yourself with one word', 'self_description' %}`
 
-Extended example: `{% text 'Descibe yourself with one word', 'self_description', 'data-required="true"' %}`
+Extended example: `{% text 'Describe yourself with one word', 'self_description', 'data-required="true"' %}`
 
 #### Checkbox
 
@@ -109,7 +131,7 @@ Example: `{% checkbox 'Do you want lunch?', 'lunch', 'checked="checked"' %}`
 
 Syntax: `{% select 'label', 'field_name', ['value1', 'value2'], 'html_options' %}`.
 
-Example: `{% select 'Favorite colour', 'colour', [ 'Red','Yellow','Blue','Green' ], 'class="funkyclass"' %}`
+Example: `{% select 'Favourite colour', 'colour', [ 'Red','Yellow','Blue','Green' ], 'class="funkyclass"' %}`
 
 #### Textarea
 
