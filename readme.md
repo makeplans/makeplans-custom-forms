@@ -14,7 +14,7 @@ There is no guaranteed way to validate custom fields. The only way to do some so
 
 All values are stored as strings.
 
-## Complete example
+## Complete examples
 
 ### Public booking form
 
