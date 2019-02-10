@@ -105,6 +105,8 @@ Custom label example: `{% state 'Region' %}`
 
 #### Country
 
+Produces a drop-down of all countries which defaults to the country specified on the account.
+
 Basic example: `{% country_code %}`
 
 Custom label example: `{% country_code 'Name of your country' %}`
