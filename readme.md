@@ -31,6 +31,19 @@ All values are stored as strings.
 {% select 'Expertise level', 'level', [ 'Beginner','Average','Expert' ] %}
 ```
 
+## Advanced usage
+
+### Required fields
+
+By default the required fields are based on your verification method. Name is always required. If you have SMS verification then phone number is a required field, and if you have selected e-mail verification then e-mail address is required.
+
+In addition you can have basic client side requirement of filling out fields. This is done by setting `data-required` attribute to `true`. There is a HTML5 attribute for required fields but as browser behaviour differs and it is not supported in all browsers we recommend that you specify `data-required="true"` instead of `required≈"true"`.
+
+Standard field example: `{% street 'Your street', 'data-required="true"' %}`
+
+Custom field example: `{% text 'Car model', 'car_model', 'data-required="true"' %}`
+
+
 ## Fields
 
 The html_options attribute is optional.
