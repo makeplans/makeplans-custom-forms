@@ -66,6 +66,8 @@ For all these fields you can omit the label and it will use the standard label f
 
 These fields are only available in the public booking form. They are already present in the person administration form.
 
+Important: You can only define these fields once in a form. If you add two name or notes fields you will lose input data. To add have multiple notes fields you can add additional [custom fields](#custom-fields---all-forms).
+
 Full syntax: `{% field 'label', 'html_attributes', 'options' %}`
 
 #### Name
