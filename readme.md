@@ -14,8 +14,11 @@ Default form:
 {% name %}
 {% phone %}
 {% email %}
+{% count %}
 {% note %}
 ```
+
+Count is only included if the service allows more than 1 person per reservation.
 
 Form with all standard fields:
 
@@ -30,6 +33,7 @@ Form with all standard fields:
 {% city %}
 {% state %}
 {% country_code %}
+{% count %}
 {% note %}
 ```
 
@@ -66,6 +70,8 @@ For all these fields you can omit the label and it will use the standard label f
 
 These fields are only available in the public booking form. They are already present in the person administration form.
 
+All standard fields are saved to the person except for count and note which is saved to the booking.
+
 Important: You can only define these fields once in a form. If you add two name or notes fields you will lose input data. To add have multiple notes fields you can add additional [custom fields](#custom-fields---all-forms).
 
 Full syntax: `{% field 'label', 'html_attributes', 'options' %}`
@@ -87,6 +93,12 @@ Custom label example: `{% email 'E-mail address' %}`
 Basic example: `{% phone %}`
 
 Custom label example: `{% phone 'Cellular' %}`
+
+#### Count
+
+Basic example: `{% count %}`
+
+Custom label example: `{% count 'How many are coming?' %}`
 
 #### Note
 
