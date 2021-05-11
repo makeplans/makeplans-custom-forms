@@ -158,6 +158,16 @@ Basic example: `{% country %}`
 
 Custom label example: `{% country 'Select your country' %}`
 
+#### Terms acceptance
+
+A checkbox for accepting terms.
+
+Basic example: `{% terms_accepted %}`
+
+Custom label example: `{% terms_accepted 'I accept' %}`
+
+You can add your terms using `<p>{{ booking.client.terms }}</p>`.
+
 ### Custom fields - all forms
 
 Custom fields can be used in both the public booking form and all administration forms.
