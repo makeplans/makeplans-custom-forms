@@ -80,7 +80,7 @@ These fields are only available in the public booking form. They are already pre
 
 All standard fields are saved to the person except for count and note which is saved to the booking.
 
-Important: You can only define these fields once in a form. If you add two name or notes fields you will lose input data. To add have multiple notes fields you can add additional [custom fields](#custom-fields---all-forms).
+Important: You can only define these fields once in a form. If you add two name or notes fields you will lose input data. So for example to have multiple notes fields you can add additional [custom fields](#custom-fields---all-forms), but these will then be unique separate fields and not related to the standard MakePlans notes field.
 
 Full syntax: `{% field 'label', 'html_attributes', 'options' %}`
 
