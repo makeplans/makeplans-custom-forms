@@ -45,6 +45,14 @@ Custom label for phone number and custom checkbox field:
 {% checkbox 'Do you want lunch when you arrive?', 'lunch', 'checked="checked"' %}
 ```
 
+Make email and phone number required:
+
+```
+{% name %}
+{% phone nil, 'data-required="true"' %}
+{% email nil, 'data-required="true"' %}
+```
+
 ### Service administration form
 
 ```
