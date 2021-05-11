@@ -228,11 +228,13 @@ You can add additional HTML attributes in the `html_attributes` parameter.
 
 By default the required fields are based on your verification method. Name is always required. If you have SMS verification then phone number is a required field, and if you have selected e-mail verification then e-mail address is required.
 
-In addition you can have basic client side requirement of filling out fields. This is done by setting `data-required` attribute to `true`. There is a HTML5 attribute for required fields but as browser behaviour differs and it is not supported in all browsers we recommend that you specify `data-required="true"` instead of `required≈"true"`.
+In addition you can have basic client side requirement of filling out fields. This is done by setting `data-required` attribute to `true`. There is a HTML5 attribute for required fields but as browser behaviour differs and it is not supported in all browsers we recommend that you specify `data-required="true"` instead of `required="true"`.
 
 Standard field example: `{% street 'Your street', 'data-required="true"' %}`
 
 Custom field example: `{% text 'Car model', 'car_model', 'data-required="true"' %}`
+
+Please be aware that this is only done client side in the browser. We do not do any server side verification of these additional required fields.
 
 ### Additional options
 
@@ -242,6 +244,6 @@ With the parameter `options` you can define object specific configurations.
 
 By default all custom fields are saved to the main object in the form (for example booking in the public booking form). You can save a field to another object, for example a person instead of the booking, by specifying that a field should be saved to another object: `'{"object":"person"}'`. Please note that this only works in the public booking form and applies only to the person when saving a booking.
 
-#### Selectbox
+#### Select box
 
 To set the default selected option for a select box: `'{"selected":"Value"}'`.
