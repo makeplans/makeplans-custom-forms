@@ -4,6 +4,15 @@
 
 Booking, person, service, event, resource and category supports adding custom attributes via a customized form. The form is built with [Liquid](http://liquidmarkup.org). Please read the [Liquid documentation](https://github.com/Shopify/liquid/wiki) for more information. You can use HTML and all standard Liquid syntax. In additional to the standard Liquid tags MakePlans has made available various standard fields (for booking and person in public booking form) as well as custom field types (for booking, person, service, event, resource and category).
 
+There are two types of forms:
+
+1. The booking form on the public booking site.
+This allows you to create a custom form for customers making a booking. You can change the label of the standard fields and add custom fields.
+
+2. Additional form fields in the administration system.
+This allows you to add custom fields to a booking, person, service, event, resource or category form in the administration system. You do not need to add standard fields to these forms, whatever you add is in addition to the standard fields. The custom fields can have a different label than on the public booking site but the field name must be identical. You can also add custom fields here that are not available on the public booking site.
+
+
 ## Complete examples
 
 ### Public booking form
@@ -245,6 +254,10 @@ Standard field example: `{% street 'Your street', 'data-required="true"' %}`
 Custom field example: `{% text 'Car model', 'car_model', 'data-required="true"' %}`
 
 Please be aware that this is only done client side in the browser. We do not do any server side verification of these additional required fields.
+
+### Use standard labels for standard fields
+
+If you need to override HTML attributes or set options for a standard field you do not need to set a custom label. You can use the standard system label by setting the label to `nil`: `{% phone nil, 'data-required="true"' %}`.
 
 ### Additional options
 
