@@ -1,4 +1,4 @@
-# MakePlans Custom Forms - Version 1.1
+# MakePlans Custom Forms
 
 ## Get started
 
