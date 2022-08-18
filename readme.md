@@ -203,7 +203,7 @@ Syntax: `{% select 'label', 'field_name', ['value1', 'value2'], 'html_attributes
 
 Basic example: `{% select 'Favourite food', 'food', ['Pizza','Taco','Sushi','Pinnekjøtt'] %}`
 
-Extended example: `{% select 'Favourite colour', 'colour', [ 'Red','Yellow','Blue','Green' ], 'class="funkyclass"', '{"selected":"Blue"}' %}`
+Extended example: `{% select 'Favourite colour', 'colour', ['Red','Yellow','Blue','Green'], 'class="funkyclass"', '{"selected":"Blue"}' %}`
 
 #### Textarea
 
@@ -226,6 +226,16 @@ Syntax: `{% date 'label', 'field_name', 'html_attributes', 'options' %}`.
 Example: `{% date 'Membership date', 'became_member_at' %}`
 
 ## Advanced usage
+
+### Localisation (i18n)
+
+You can use `locale` to render output based on language. For example:
+
+{{% if locale == 'nb' %}
+Viking
+{% else %}
+Not viking
+{% endif %}}
 
 ### HTML Output
 
