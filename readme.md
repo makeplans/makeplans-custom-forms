@@ -225,6 +225,14 @@ Syntax: `{% date 'label', 'field_name', 'html_attributes', 'options' %}`.
 
 Example: `{% date 'Membership date', 'became_member_at' %}`
 
+#### Url
+
+A URL field will display a clickable URL.
+
+Syntax: `{% url 'label', 'field_name', 'html_attributes', 'options' %}`.
+
+Example: `{% url 'Website', 'website_link' %}`
+
 ## Advanced usage
 
 ### Localisation (i18n)
