@@ -1,17 +1,21 @@
 # MakePlans Custom Forms
 
+* [Get started](#get-started)
+* [Complete examples](#complete-examples)
+* [Available standard fields and custom field types](#fields)
+* [Advanced usage](#advanced-usage)
+
 ## Get started
 
-Booking, person, service, event, resource and category supports adding custom attributes via a customized form. The form is built with [Liquid](http://liquidmarkup.org). Please read the [Liquid documentation](https://github.com/Shopify/liquid/wiki) for more information. You can use HTML and all standard Liquid syntax. In additional to the standard Liquid tags MakePlans has made available various standard fields (for booking and person in public booking form) as well as custom field types (for booking, person, service, event, resource and category).
+Booking, person, service, event, resource and category supports adding custom fields using a customized form. The form is built with [Liquid](http://liquidmarkup.org). Please read the [Liquid documentation](https://github.com/Shopify/liquid/wiki) for more information. You can use HTML and all standard Liquid syntax. In additional to the standard Liquid tags MakePlans has made available various standard fields (for booking and person in public booking form) as well as custom field types (for booking, person, service, event, resource and category).
 
 There are two types of forms:
 
-1. The booking form on the public booking site.
+1. **The booking form on the public booking site.**
 This allows you to create a custom form for customers making a booking. You can change the label of the standard fields and add custom fields.
 
-2. Additional form fields in the administration system.
+2. **Additional form fields in the administration system.**
 This allows you to add custom fields to a booking, person, service, event, resource or category form in the administration system. You do not need to add standard fields to these forms, whatever you add is in addition to the standard fields. The custom fields can have a different label than on the public booking site but the field name must be identical. You can also add custom fields here that are not available on the public booking site.
-
 
 ## Complete examples
 
@@ -76,22 +80,47 @@ With default select value:
 {% select 'Expertise level', 'level', ['Beginner','Average','Expert'], '', '{"selected":"Average"}' %}
 ```
 
-
 ## Fields
 
-The html_attributes attribute is optional.
+Standard fields:
+* [Name](#name)
+* [Email](#email)
+* [Phone](#phone)
+* [Count](#count)
+* [Note](#note)
+* [Date of Birth](#date-of-birth)
+* [National Id Number](#national-id-number)
+* [Street](#street)
+* [Postal code](#postal-code)
+* [City](#city)
+* [State](#state)
+* [Country](#country)
+* [Terms](#terms-acceptance)
+* [Marketing concent](#opt-in-for-marketing)
+
+Custom field types:
+* [Text](#text)
+* [Checkbox](#checkbox)
+* [Select](#select)
+* [Textarea](#textarea)
+* [Hidden](#hidden)
+* [Date](#date)
+* [URL](#url)
+
 
 ### Standard fields - public booking form
 
-For all these fields you can omit the label and it will use the standard label for the specified field. `{% name %}` will produce a label with 'Name'.
-
 These fields are only available in the public booking form. They are already present in the person administration form.
+
+For all these fields you can omit the label and it will use the standard label for the specified field. `{% name %}` will produce a label with 'Name'.
 
 All standard fields are saved to the person except for count and note which is saved to the booking.
 
 Important: You can only define these fields once in a form. If you add two name or notes fields you will lose input data. So for example to have multiple notes fields you can add additional [custom fields](#custom-fields---all-forms), but these will then be unique separate fields and not related to the standard MakePlans notes field.
 
 Full syntax: `{% field 'label', 'html_attributes', 'options' %}`
+
+The `html_attributes` and `options` parameters are optional.
 
 #### Name
 
@@ -178,9 +207,21 @@ Custom label example: `{% terms_accepted 'I accept' %}`
 You can add your terms using `<p>{{ booking.client.terms }}</p>`.
 
 #### Opt in for marketing
+
+A checkbox for giving concent to adding to third party newsletter services.
+
+Basic example: `{% opt_in_marketing %}`
+
+Custom label example: `{% opt_in_marketing 'Yes but do not spam me' %}`
+
+
 ### Custom fields - all forms
 
 Custom fields can be used in both the public booking form and all administration forms.
+
+Example syntax (exact syntax differs between custom field types): `{% custom_field_type 'label', 'field_name', 'html_attributes', 'options' %}`
+
+The `html_attributes` and `options` parameters are optional. `field_name` is used internally for key identification and also in all API as well as data exports.
 
 #### Text
 
@@ -226,7 +267,7 @@ Syntax: `{% date 'label', 'field_name', 'html_attributes', 'options' %}`.
 
 Example: `{% date 'Membership date', 'became_member_at' %}`
 
-#### Url
+#### URL
 
 A URL field will display a clickable URL.
 
@@ -240,11 +281,13 @@ Example: `{% url 'Website', 'website_link' %}`
 
 You can use `locale` to render output based on language. For example:
 
-{{% if locale == 'nb' %}
+`
+{% if locale == 'nb' %}
 Viking
 {% else %}
 Not viking
-{% endif %}}
+{% endif %}
+`
 
 ### HTML Output
 
