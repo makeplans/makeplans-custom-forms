@@ -177,6 +177,7 @@ Custom label example: `{% terms_accepted 'I accept' %}`
 
 You can add your terms using `<p>{{ booking.client.terms }}</p>`.
 
+#### Opt in for marketing
 ### Custom fields - all forms
 
 Custom fields can be used in both the public booking form and all administration forms.
