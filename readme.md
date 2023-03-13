@@ -96,7 +96,7 @@ Standard fields:
 * [State](#state)
 * [Country](#country)
 * [Terms](#terms-acceptance)
-* [Marketing concent](#opt-in-for-marketing)
+* [Marketing consent](#opt-in-for-marketing)
 
 Custom field types:
 * [Text](#text)
@@ -208,7 +208,7 @@ You can add your terms using `<p>{{ booking.client.terms }}</p>`.
 
 #### Opt in for marketing
 
-A checkbox for giving concent to adding to third party newsletter services.
+A checkbox for giving consent to adding to third party newsletter services.
 
 Basic example: `{% opt_in_marketing %}`
 
