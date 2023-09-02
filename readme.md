@@ -66,6 +66,8 @@ Make email and phone number required:
 {% email nil, 'data-required="true"' %}
 ```
 
+By setting the label to `nil` the default translation label for the standard field is used, it is recommended unless you want to specify another label text.
+
 ### Service administration form
 
 ```
