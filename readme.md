@@ -329,6 +329,17 @@ Please be aware that this is only done client side in the browser. We do not do 
 
 If you need to override HTML attributes or set options for a standard field you do not need to set a custom label. You can use the standard system label by setting the label to `nil`: `{% phone nil, 'data-required="true"' %}`.
 
+### Validation
+
+There is no server side validation done for custom fields. We offer some simple client side validations, most notably with [required fields](#required-fields), but keep in mind that a user easily can skip these validations.
+
+Validation can be added using data-attributes: `data-validate="validation"`. Options are set using `data-validate-{method}-{setting}` The following validation methods are available:
+
+* `date`. Date format can be set using `validate-date-format-visual` and/or `validate-date-format`. See [Moment.js](https://momentjs.com/docs/#/displaying/format/) for format options.
+* `national_id_no`. Validates national id number, intended to be used for the standard field national_id_no. Only supports Norwegian rules for id number. Country can be set using `validate-national_id_no-default-country_code`, value should be of ISO 3166-1 alpha-2 format.
+* `number`. Validate that the value is less than or equal to a max value. The value can be set using `validate-number-max`.
+
+
 ### Additional options
 
 With the parameter `options` you can define object specific configurations.
