@@ -106,7 +106,7 @@ Custom field types:
 * [Hidden](#hidden)
 * [Date](#date)
 * [URL](#url)
-
+* [Number](#number)
 
 ### Standard fields - public booking form
 
@@ -274,6 +274,14 @@ A URL field will display a clickable URL.
 Syntax: `{% url 'label', 'field_name', 'html_attributes', 'options' %}`.
 
 Example: `{% url 'Website', 'website_link' %}`
+
+#### Number
+
+Input field with type number.
+
+Syntax: `{% number 'label', 'field_name', 'html_attributes', 'options' %}`.
+
+Example: `{% number 'How old are you?', 'age' %}`
 
 ## Advanced usage
 
