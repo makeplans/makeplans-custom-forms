@@ -47,6 +47,7 @@ Form with all standard fields:
 {% state %}
 {% country_code %}
 {% count %}
+{% coupon_code %}
 {% note %}
 ```
 
@@ -99,6 +100,7 @@ Standard fields:
 * [Country](#country)
 * [Terms](#terms-acceptance)
 * [Marketing consent](#opt-in-for-marketing)
+* [Coupon code](#coupon-code)
 
 Custom field types:
 * [Text](#text)
@@ -216,6 +218,11 @@ Basic example: `{% opt_in_marketing %}`
 
 Custom label example: `{% opt_in_marketing 'Yes but do not spam me' %}`
 
+#### Coupon code
+
+Basic example: `{% coupon_code %}`
+
+Custom label example: `{% coupon_code 'Secret code' %}`
 
 ### Custom fields - all forms
 
@@ -340,7 +347,6 @@ Validation can be added using data-attributes: `data-validate="validation"`. Opt
 * `date`. Date format can be set using `validate-date-format-visual` and/or `validate-date-format`. See [Moment.js](https://momentjs.com/docs/#/displaying/format/) for format options.
 * `national_id_no`. Validates national id number, intended to be used for the standard field national_id_no. Only supports Norwegian rules for id number. Country can be set using `validate-national_id_no-default-country_code`, value should be of ISO 3166-1 alpha-2 format.
 * `number`. Validate that the value is less than or equal to a max value. The value can be set using `validate-number-max`.
-
 
 ### Additional options
 
