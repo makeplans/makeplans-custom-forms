@@ -248,7 +248,7 @@ Example: `{% checkbox 'Do you want lunch?', 'lunch', 'checked="checked"' %}`
 
 #### Select
 
-By default a blank option is added to ensure the user is not selecting a value by mistake. To set a different default selected value specify it in `options`.
+By default a blank option is added to ensure the user is not selecting a value by mistake. To set a different default selected value specify it in `options`. To not include a blank option set `include_blank` to `false` in `options`.
 
 Syntax: `{% select 'label', 'field_name', ['value1', 'value2'], 'html_attributes', 'options' %}`.
 
