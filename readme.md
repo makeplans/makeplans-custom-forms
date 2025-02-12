@@ -208,7 +208,7 @@ Basic example: `{% terms_accepted %}`
 
 Custom label example: `{% terms_accepted 'I accept' %}`
 
-You can add your terms using `<p>{{ booking.client.terms }}</p>`.
+You can add your terms using `<p>{{ booking.terms }}</p>` or in non-booking renderings use `{{ client.terms }}`.
 
 #### Opt in for marketing
 
