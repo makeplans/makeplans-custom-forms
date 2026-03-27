@@ -348,6 +348,10 @@ Validation can be added using data-attributes: `data-validate="validation"`. Opt
 * `national_id_no`. Validates national id number, intended to be used for the standard field national_id_no. Only supports Norwegian rules for id number. Country can be set using `validate-national_id_no-default-country_code`, value should be of ISO 3166-1 alpha-2 format.
 * `number`. Validate that the value is less than or equal to a max value. The value can be set using `validate-number-max`.
 
+In our legacy design template 'Amsterdam' the booking form is hidden for authenticated customers. When a customer does not have a required attribute in their profile this will result in a validation error. This error will notify the customer to contact the account owner to manually modify their profile. To avoid this you can disable validation for existing customers:
+
+`<input type="hidden" data-ignore-errors-for-existing-customer="true">`
+
 ### Additional options
 
 With the parameter `options` you can define object specific configurations.
