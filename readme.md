@@ -256,6 +256,12 @@ Basic example: `{% select 'Favourite food', 'food', ['Pizza','Taco','Sushi','Pin
 
 Extended example: `{% select 'Favourite colour', 'colour', ['Red','Yellow','Blue','Green'], 'class="funkyclass"', '{"selected":"Blue"}' %}`
 
+To store a different value than the displayed label, use label/value pairs instead of a flat list: `[['label1','value1'], ['label2','value2']]`. The label is shown to the user and the value is stored.
+
+Pair syntax: `{% select 'label', 'field_name', [['label1','value1'], ['label2','value2']], 'html_attributes', 'options' %}`.
+
+Pair example: `{% select 'Do you want lunch?', 'lunch', [['Yes','true'],['No','false']] %}`
+
 #### Textarea
 
 Syntax: `{% textarea 'label', 'field_name', 'html_attributes', 'options' %}`.
